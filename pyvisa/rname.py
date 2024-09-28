@@ -393,6 +393,12 @@ class ASRLInstr(ResourceName):
     #: Serial connection to use.
     board: str = "0"
 
+    #: Host address of the device for RFC-2217-based serial connections (IPv4 or host name)
+    host_address: str = "0.0.0.0"
+
+    #: Port on which to establish the connection
+    port: str = "0"
+
     interface_type: ClassVar[str] = "ASRL"
     resource_class: ClassVar[str] = "INSTR"
     is_rc_optional: ClassVar[bool] = True
